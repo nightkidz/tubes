@@ -7,6 +7,7 @@ using namespace std;
 
 typedef struct element_status *address;
 typedef struct element_like *addresslike;
+typedef struct element_akun *addressakun;
 
 struct status
 {
@@ -23,16 +24,16 @@ struct element_like
 {
     like infol;
     addresslike next;
-    addresslike prev;
+    addressakun akun;
+    address status;
 };
 
 struct element_status
 {
     status infos;
     address next;
+    addressakun akun;
     address prev;
-    addresslike nextL;
-    addresslike prevL;
 };
 
 struct List
